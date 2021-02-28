@@ -1,12 +1,12 @@
 const express = require('express');
 const passport = require('passport');
 
-const User = require('../../models/User');
-const Profile = require('../../models/Profile');
-const isEmpty = require('../../validation/isEmpty');
-const validateProfileInput = require('../../validation/profile');
-const validateExperienceInput = require('../../validation/experience');
-const validateEducationInput = require('../../validation/education');
+const User = require('../models/User');
+const Profile = require('../models/Profile');
+const isEmpty = require('../validation/isEmpty');
+const validateProfileInput = require('../validation/profile');
+const validateExperienceInput = require('../validation/experience');
+const validateEducationInput = require('../validation/education');
 const router = express.Router();
 
 router.get(

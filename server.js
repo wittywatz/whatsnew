@@ -5,9 +5,9 @@ const passport = require('passport');
 
 require('./db/mongoose');
 
-const users = require('./routes/api/users');
-const profile = require('./routes/api/profile');
-const posts = require('./routes/api/posts');
+const users = require('./routes/users');
+const profile = require('./routes/profile');
+const posts = require('./routes/posts');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
