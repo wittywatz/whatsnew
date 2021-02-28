@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const bodyParser = require('body-parser');
+const passport = require('passport');
 
 require('./db/mongoose');
 
@@ -11,6 +12,9 @@ const posts = require('./routes/api/posts');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(passport.initialize());
+require('./services/passport');
 
 app.use('/api/users', users);
 app.use('/api/profile', profile);
