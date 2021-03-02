@@ -29,9 +29,9 @@ router.post('/register', async (req, res) => {
     const user = new User({ name, email, avatar, password });
     await user.save();
     const token = await user.generateAuthToken();
-    res.status(201).send({ user, token });
+    res.status(201).send({ user, ...token });
   } catch (error) {
-    res.status(400).send();
+    res.status(400).send(errors);
   }
 });
 
@@ -49,7 +49,7 @@ router.post('/login', async (req, res) => {
       req.body.password
     );
     const token = await user.generateAuthToken();
-    res.send({ user, token });
+    res.send({ user, ...token });
   } catch (error) {
     errors.email = 'Unable to login';
     errors.password = 'Unable to login';

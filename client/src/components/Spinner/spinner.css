@@ -1,0 +1,14 @@
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  /* margin-top: 15%; */
+}
+
+.spinner img {
+  width: 300px;
+  margin: 15rem auto;
+  display: block;
+}
+/* @media (max-width: 768px){
+  margin-top: 25%;
+} */

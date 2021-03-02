@@ -19,12 +19,12 @@ router.get(
         user: req.user._id,
       }).populate('user', ['name', 'avatar']); //Populate profile with users name and avatar
       if (!profile) {
-        errors.noprofile = 'There is no profile for this user';
-        return res.status(404).json(errors);
+        // errors.noprofile = 'There is no profile for this user';
+        return res.send({});
       }
       res.send(profile);
     } catch (error) {
-      res.status(404).send(error);
+      res.status(404).send(errors);
     }
   }
 );

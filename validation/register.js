@@ -33,7 +33,7 @@ const validateRegisterInput = (data) => {
   }
 
   if (!Validator.equals(data.password, data.password2)) {
-    errors.password = "Password doesn't match";
+    errors.password2 = "Password doesn't match";
   }
   return { errors, isValid: isEmpty(errors) };
 };

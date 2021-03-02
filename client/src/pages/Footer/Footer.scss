@@ -1,0 +1,49 @@
+footer {
+  // margin-top: 1.5rem;
+  //Always make your parent to use absolute .App {
+  //   position: relative;
+  //   min-height: 100vh;
+  // }
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
+
+  p {
+    color: #42f55d;
+    font-weight: bolder;
+    margin-bottom: 0;
+    font-size: large;
+  }
+  .cc {
+    text-decoration: 'none';
+    color: '#000';
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: 'none';
+    color: '#000';
+    margin-bottom: 0.5rem;
+    transition: all 2s ease-in-out;
+
+    a {
+      margin: 0 1rem;
+
+      &:hover {
+        i {
+          font-size: 32px;
+          color: #42f55d;
+        }
+      }
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+}
